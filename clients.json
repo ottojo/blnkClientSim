@@ -1,0 +1,32 @@
+[
+  {
+    "id": "kitchen",
+    "address": "localhost:7891",
+    "startPosition": {
+      "x": -300,
+      "y": -100,
+      "z": 0
+    },
+    "endPosition": {
+      "x": -100,
+      "y": -100,
+      "z": 0
+    },
+    "pixelsPerMeter": 30
+  },
+  {
+    "id": "lounge",
+    "address": "localhost:7892",
+    "startPosition": {
+      "x": 50,
+      "y": -100,
+      "z": -400
+    },
+    "endPosition": {
+      "x": 50,
+      "y": -100,
+      "z": -500
+    },
+    "pixelsPerMeter": 20
+  }
+]
