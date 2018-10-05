@@ -5,12 +5,12 @@
     "startPosition": {
       "x": -300,
       "y": -100,
-      "z": 0
+      "z": 10
     },
     "endPosition": {
       "x": -100,
       "y": -100,
-      "z": 0
+      "z": 10
     },
     "pixelsPerMeter": 30
   },
@@ -18,15 +18,30 @@
     "id": "lounge",
     "address": "localhost:7892",
     "startPosition": {
-      "x": 50,
+      "x": 10,
       "y": -100,
       "z": -400
     },
     "endPosition": {
-      "x": 50,
+      "x": 10,
       "y": -100,
       "z": -500
     },
     "pixelsPerMeter": 20
+  },
+  {
+    "id": "test",
+    "address": "172.23.17.195:7893",
+    "startPosition": {
+      "x": 100,
+      "y": -100,
+      "z": -400
+    },
+    "endPosition": {
+      "x": 100,
+      "y": -100,
+      "z": -500
+    },
+    "pixelsPerMeter": 60
   }
 ]
