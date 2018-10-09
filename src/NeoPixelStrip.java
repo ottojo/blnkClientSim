@@ -10,8 +10,8 @@ class NeoPixelStrip {
     public NeoPixelStrip(PApplet p, float sX, float sY, float sZ, float eX, float eY, float eZ, float ledPerMeter) {
         leds = new ArrayList<NeoPixel>();
         PVector direction = new PVector(eX - sX, eY - sY, eZ - sZ);
-        int nLeds = (int) (ledPerMeter * (direction.mag() / 100.0));
-        direction.setMag(100.0f / ledPerMeter);
+        int nLeds = (int) (ledPerMeter * (direction.mag()));
+        direction.setMag(1 / ledPerMeter);
         for (int i = 0; i < nLeds; i++) {
             leds.add(new NeoPixel(p, new PVector(sX, sY, sZ)));
             sX += direction.x;

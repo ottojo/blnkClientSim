@@ -1,4 +1,5 @@
-import processing.core.*;
+import processing.core.PApplet;
+import processing.core.PVector;
 
 class NeoPixel {
     private int c;
@@ -16,7 +17,7 @@ class NeoPixel {
 
     public synchronized void draw() {
         p.pushMatrix();
-        p.translate(pos.x, pos.y, pos.z);
+        p.translate(-100 * pos.y, -100 * pos.z, -100 * pos.x);
         p.fill(c);
         p.noStroke();
         p.sphere(2);

@@ -8,14 +8,8 @@ import java.util.List;
 
 public class MainApp extends PApplet {
 
-
     PeasyCam cam;
-
-
-// 1 = 1cm
-
     List<NeoClient> clientList = new ArrayList<NeoClient>();
-
 
     public static void main(String[] args) {
         PApplet.main("MainApp", args);
@@ -30,7 +24,6 @@ public class MainApp extends PApplet {
 
     @Override
     public void setup() {
-
         JSONArray clients = loadJSONArray("clients.json");
         for (int i = 0; i < clients.size(); i++) {
             JSONObject client = clients.getJSONObject(i);
@@ -52,13 +45,12 @@ public class MainApp extends PApplet {
             new Thread(c).start();
         }
 
-
         cam = new PeasyCam(this, 0, -180, 0, 1000);
         cam.setMinimumDistance(10);
         cam.setMaximumDistance(100000);
-        //smooth(8);
+        smooth(8);
         background(0);
-        perspective(PI / 3.0f, (float) width / height, 10,100000);
+        perspective(PI / 3.0f, (float) width / height, 10, 100000);
     }
 
     @Override
@@ -69,20 +61,21 @@ public class MainApp extends PApplet {
         // Boden
         pushMatrix();
         stroke(255);
-        fill(100);
+        noFill();
         rectMode(CENTER);
         rotateX(PI / 2);
         rect(0, 0, 5000, 5000);
         popMatrix();
 
         // Haus
-
         pushMatrix();
         translate(-1050, -300, -650);
+        noFill();
         box(2100, 600, 1300);
         popMatrix();
         pushMatrix();
         translate(-400, -300, -1700);
+        noFill();
         box(800, 600, 800);
         popMatrix();
 
